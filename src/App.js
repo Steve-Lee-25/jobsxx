@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes, HashRouter } from "react-router-dom";
 import Register from "./Components/Register/Index";
 import Home from "./Components/Home/Index";
 import Signin from "./Components/Signin/Index";
@@ -15,14 +15,14 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/register" element={<Register />} />
           <Route path="/cvtemplate" element={<CVStudio />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
